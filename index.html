@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f6f5f0">
+<meta name="description" content="每天一點，把日語記起來。整理單字、練習讀音，再把答錯的字練熟。">
+<title>ことば｜日語練習室</title>
+<style>
+:root{--bg:#f6f5f0;--paper:#fffefa;--ink:#243b32;--muted:#738078;--line:#e0e4da;--green:#345b46;--soft:#e8eee4;--lime:#dce9b3;--new:#f9f0d6;--red:#9a493c;--redbg:#fbefeb;--radius:18px;font-family:Inter,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:var(--bg);font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.45}button,input,select{border-radius:9px}button{transition:background .16s,transform .16s}button:active:not(:disabled){transform:translateY(1px)}:focus-visible{outline:3px solid #819762;outline-offset:3px}[hidden]{display:none!important}h1,h2,h3,p{margin:0}button svg{width:17px;height:17px;flex-shrink:0}a{color:var(--green)}.shell{max-width:1200px;margin:auto;padding:0 36px}header{height:92px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px;font-weight:650;letter-spacing:.02em}.mark{display:grid;place-items:center;width:37px;height:37px;background:var(--green);color:white;border-radius:11px;font-family:serif;font-size:23px}.brand-name{font-family:"Yu Mincho",serif;font-size:23px}.brand-divider{height:18px;width:1px;background:#c7d0c4;margin:0 2px}.brand-sub{font-size:13px;font-weight:400;color:var(--muted)}.header-note{font-size:11px;letter-spacing:.16em;color:var(--muted);display:flex;align-items:center;gap:10px}.dot{width:6px;height:6px;border-radius:50%;background:#82936c}.intro{padding:45px 0 29px;display:flex;justify-content:space-between;align-items:center;gap:24px}.eyebrow{font-size:10px;letter-spacing:.2em;font-weight:700;color:var(--muted);margin-bottom:13px}.intro h1{font-size:clamp(26px,3vw,36px);font-weight:600;letter-spacing:.02em;line-height:1.5}.intro p{font-size:13px;color:var(--muted);margin-top:11px;line-height:1.8}.seal{font-family:"Yu Mincho",serif;border:1px solid #a7b69a;color:#708266;border-radius:50%;width:76px;height:76px;display:grid;place-items:center;transform:rotate(9deg);font-size:26px;position:relative;flex-shrink:0}.seal:after{content:"";position:absolute;inset:5px;border:1px solid #c2ccb9;border-radius:50%}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-bottom:31px}.stat{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:17px 23px;display:flex;align-items:center;justify-content:space-between}.stat-label{font-size:12px;color:var(--muted);margin-bottom:7px}.stat strong{font-size:25px;font-weight:550;letter-spacing:-.04em}.stat small{font-size:11px;color:var(--muted);padding-left:6px}.stat-icon{color:#85917d;background:#f0f2e9;border-radius:50%;width:35px;height:35px;display:grid;place-items:center;font-size:17px}.tabs{display:flex;gap:29px;border-bottom:1px solid var(--line);margin-bottom:24px}.tab{border:0;border-bottom:2px solid transparent;background:transparent;color:var(--muted);padding:0 2px 15px;display:flex;align-items:center;gap:9px;font-size:14px}.tab[aria-selected=true]{color:var(--green);border-bottom-color:var(--green);font-weight:650}.tab .tag{background:var(--soft);border-radius:5px;padding:2px 6px;font-size:10px}.content-grid{display:grid;grid-template-columns:minmax(0,1fr) 278px;gap:24px;align-items:start}.panel{border:1px solid var(--line);background:var(--paper);border-radius:var(--radius);overflow:hidden}.table-head{padding:23px 24px 17px;display:flex;gap:12px;justify-content:space-between;align-items:center}.panel-title{font-size:17px;font-weight:650}.sub{color:var(--muted);font-size:11px;line-height:1.8;margin-top:5px}.actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--line);background:var(--paper);padding:10px 13px;color:var(--ink);font-size:12px;font-weight:550;min-height:40px}.btn:hover:not(:disabled){background:var(--soft)}.btn.primary{background:var(--green);color:#fff;border-color:var(--green)}.btn.primary:hover:not(:disabled){background:#274b37}.btn.light{background:var(--lime);border-color:var(--lime);color:#294132}.btn.wide{width:100%}.filters{display:flex;align-items:center;gap:12px;padding:0 24px 18px}.search-wrap{position:relative;flex:1}.search-wrap svg{position:absolute;left:11px;top:12px;width:15px;height:15px;color:var(--muted)}input,select{border:1px solid var(--line);background:#fffefa;color:var(--ink);padding:11px 12px;min-width:0;max-width:100%}input::placeholder{color:#949d91}.search-wrap input{width:100%;padding-left:34px;font-size:12px}.legend{color:#8b7952;font-size:11px;white-space:nowrap;display:flex;align-items:center;gap:6px}.legend:before{content:"";width:8px;height:8px;background:#efdb9e;border-radius:2px}.table-scroll{overflow:auto}table{border-collapse:collapse;width:100%;text-align:left}thead{background:#f1f3ec}th{font-size:11px;font-weight:550;letter-spacing:.06em;color:#788273;padding:12px 24px}td{border-top:1px solid #edf0e7;padding:16px 24px;font-size:13px;line-height:1.6;overflow-wrap:anywhere}td.word{font-family:"Yu Mincho","Noto Serif JP",serif;font-size:20px;font-weight:500;color:#2a4235;min-width:100px}td.kana{color:#526548}td.meaning{color:#7b8177}tr.is-new{background:var(--new)}.new-label{font-family:inherit;font-size:8px;display:inline-block;vertical-align:middle;background:#ead9a7;color:#756039;padding:1px 4px;border-radius:3px;margin-left:7px;font-weight:600}.table-foot{border-top:1px solid var(--line);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:11px}.table-foot button{border:0;background:transparent;padding:5px 0;color:var(--green);font-size:11px;text-decoration:underline;text-underline-offset:3px}.practice-card{background:var(--green);color:#fff;border-radius:var(--radius);padding:25px;position:relative;overflow:hidden}.practice-card .eyebrow{color:#bdd0ae;font-size:9px}.practice-card h2{font-size:21px;line-height:1.55;font-weight:550;position:relative}.practice-card p{font-size:11px;color:#d2ddcd;line-height:1.95;margin-top:11px}.practice-card .btn{margin-top:22px;position:relative}.kana-art{font-family:"Yu Mincho",serif;font-size:108px;position:absolute;right:-8px;top:20px;color:#a0b78a;opacity:.1;transform:rotate(-10deg)}.small-card{border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-top:18px}.small-card h3{font-size:12px;margin-bottom:16px}.step{display:flex;gap:11px;margin:15px 0;align-items:flex-start}.step-num{width:22px;height:22px;border:1px solid #d6decb;border-radius:50%;display:grid;place-items:center;font-size:10px;color:#7d8d6b;flex-shrink:0}.step p{font-size:11px;line-height:1.85;color:var(--muted)}.step b{font-weight:600;color:#526146}.tiny-note{font-size:10px;line-height:1.9;color:#92998b;margin-top:20px}.notice{padding:12px 16px;border:1px solid #d8dfc9;border-radius:10px;background:#edf1e4;font-size:12px;line-height:1.85;margin-bottom:20px;overflow-wrap:anywhere}.notice.error{color:var(--red);border-color:#efd7ce;background:var(--redbg)}.notice:empty{display:none}.empty{text-align:center;padding:48px 20px;color:var(--muted);font-size:13px}.study-quote{display:flex;justify-content:space-between;align-items:center;gap:20px;color:#92998b;font-size:10px;padding:25px 1px 35px;letter-spacing:.05em}.study-quote span:first-child{font-family:serif;font-size:12px;letter-spacing:.12em}.exam-config{padding:34px;max-width:780px;margin:auto}.section-kicker{font-size:10px;color:var(--muted);letter-spacing:.16em;margin-bottom:12px}.exam-config h2{font-size:26px;font-weight:550}.lead{font-size:13px;line-height:1.9;color:var(--muted);margin:12px 0 25px}.mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:23px}.mode-card{border:1px solid var(--line);padding:20px;border-radius:12px;cursor:pointer;display:flex;gap:10px;align-items:start}.mode-card:has(input:checked){border-color:var(--green);background:#eff3e9}.mode-card input{accent-color:var(--green);margin-top:3px}.mode-card strong{display:block;font-size:14px}.mode-card small{font-size:11px;color:var(--muted);line-height:1.8;display:block;margin-top:7px}.exam-wrap{max-width:820px;margin:auto}.exam-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);margin-bottom:12px}.progress{height:5px;background:#e2e7da;border-radius:4px;margin-bottom:21px;overflow:hidden}.progress div{height:100%;background:#8b9e6e;transition:width .2s}.question-card{padding:34px}.question-label{font-size:11px;letter-spacing:.1em;color:var(--muted);display:flex;justify-content:space-between}.question-word{font-family:"Yu Mincho","Noto Serif JP",serif;font-weight:500;font-size:clamp(42px,8vw,66px);text-align:center;line-height:1.5;margin-top:29px;overflow-wrap:anywhere}.question-meaning{text-align:center;color:var(--muted);font-size:14px;margin:3px 0 35px;overflow-wrap:anywhere}.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.option{background:var(--paper);border:1px solid var(--line);min-height:62px;padding:14px;text-align:left;display:flex;align-items:center;gap:16px;font-size:18px;overflow-wrap:anywhere}.option:hover{background:var(--soft)}.option[aria-pressed=true]{background:#ecf1e4;border:2px solid var(--green);padding:13px}.option-num{font-size:11px;border:1px solid #d6dfcc;width:25px;height:25px;display:grid;place-items:center;border-radius:5px;flex-shrink:0;color:var(--muted)}.fill-label{display:block;font-size:12px;color:var(--muted);margin-bottom:8px}.fill-input{width:100%;font-size:22px;padding:17px}.question-nav{display:flex;align-items:center;justify-content:space-between;gap:15px;border-top:1px solid var(--line);margin-top:30px;padding-top:23px}.question-nav small{font-size:10px;color:var(--muted)}.palette{display:flex;gap:7px;flex-wrap:wrap;margin:20px 0}.palette button{height:34px;min-width:34px;border:1px solid var(--line);background:var(--paper);font-size:11px;color:var(--muted)}.palette button.answered{background:#e2ebd6;color:var(--green)}.palette button.current{outline:2px solid var(--green);outline-offset:1px}.submit-row{display:flex;justify-content:flex-end;gap:12px;align-items:center;flex-wrap:wrap}.result-hero{padding:30px;text-align:center}.score{font-size:68px;font-weight:500;letter-spacing:-.06em;line-height:1.3;margin:12px 0 0}.score small{font-size:16px;color:var(--muted);letter-spacing:0}.result-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:23px}.wrong-list{margin:20px 0;padding:20px 23px;background:#f7eee6;border:1px solid #e8dbcb;border-radius:13px}.wrong-list h3{font-size:13px;margin-bottom:12px;color:#825b3e}.wrong-chip{display:inline-block;border:1px solid #e2cdb6;background:#fffbf6;padding:6px 10px;border-radius:7px;font-size:12px;margin:0 6px 7px 0;overflow-wrap:anywhere;max-width:100%}.wrong-chip small{color:#94785d;margin-left:7px}.review-row{border:1px solid var(--line);border-radius:11px;padding:18px 20px;background:var(--paper);display:grid;grid-template-columns:28px 1.2fr 1fr 1fr;gap:10px;align-items:center;margin-top:10px;font-size:13px;overflow-wrap:anywhere}.review-row.incorrect{border-left:3px solid #c48c67}.review-row small{display:block;font-size:10px;color:var(--muted);margin-bottom:5px}.review-row .good{color:var(--green)}.review-row .bad{color:var(--red)}.review-row strong{font-family:serif;font-size:19px;font-weight:500}.review-heading{margin:26px 0 14px;font-size:15px}dialog{background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:18px;padding:28px;width:450px;max-width:calc(100% - 32px);max-height:90vh;overflow:auto}dialog::backdrop{background:#233e3159;backdrop-filter:blur(3px)}.dialog-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:21px}.dialog-head h2{font-size:19px}.close{background:transparent;border:0;color:var(--muted);font-size:23px;padding:4px 10px}.field{display:block;margin:15px 0;font-size:12px}.field input{display:block;width:100%;margin-top:8px}.form-error{font-size:12px;color:var(--red);line-height:1.8;margin:10px 0}.dev{border-top:1px solid var(--line);padding:19px 0 28px;font-size:11px;color:var(--muted)}.dev summary{cursor:pointer}.dev p{line-height:1.9;margin:12px 0}.test-results{line-height:2;white-space:pre-wrap;font-size:11px;overflow-wrap:anywhere}.footer-label{font-size:10px;color:#9a9f92;letter-spacing:.1em}svg{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.skip{position:absolute;left:12px;top:-60px;background:var(--paper);padding:12px;z-index:5}.skip:focus{top:12px}
+@media(max-width:1000px){.content-grid{grid-template-columns:minmax(0,1fr) 238px;gap:18px}.table-head{align-items:flex-start;flex-direction:column}.stat{padding:16px 18px}th,td{padding-left:18px;padding-right:18px}}
+@media(max-width:760px){.shell{padding:0 20px}header{height:76px}.header-note{display:none}.brand-sub{font-size:11px}.intro{padding-top:31px}.intro h1{font-size:26px}.seal{width:58px;height:58px;font-size:20px}.intro p{font-size:12px}.stats{gap:9px;margin-bottom:26px}.stat{padding:14px 12px;display:block}.stat-icon{display:none}.stat strong{font-size:24px}.stat-label{font-size:10px}.stat small{font-size:9px}.content-grid{grid-template-columns:1fr}.table-head{flex-direction:row;align-items:center;padding:20px 18px 15px}.table-head .actions{gap:6px}.table-head .btn{padding:9px 10px;font-size:11px}.table-head .sub{display:none}.filters{padding:0 18px 17px}.legend{font-size:10px}.table-foot{padding:13px 18px}.practice-card{padding:23px}.practice-card h2 br{display:none}.practice-card .btn{width:auto;padding-left:25px;padding-right:25px;margin-top:15px}.practice-card p{max-width:340px}.small-card{display:none}.study-quote{font-size:9px;align-items:flex-start}.study-quote span:first-child{font-size:10px}.exam-config{padding:24px}.question-card{padding:24px 20px}.mode-card{padding:16px 12px}.mode-grid{gap:10px}.review-row{grid-template-columns:22px 1fr 1fr;gap:10px;padding:15px}.review-row .review-word{grid-column:2/4}.review-row .review-answer{grid-column:2}.question-nav small{display:none}.review-heading{font-size:14px}.options{gap:9px}.option{font-size:17px;gap:10px}.intro h1{max-width:280px}.score{font-size:60px}}
+
+.search-wrap,.mode-card,.mode-card span,.option,.option span[lang] {min-width:0}
+.mode-grid,.options {grid-template-columns:repeat(2,minmax(0,1fr))}
+.option span[lang],.mode-card span {overflow-wrap:anywhere}
+.tab {min-height:44px}
+.export-links {display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:0 24px 14px}
+.export-links a {min-height:44px}
+dialog {max-height:90dvh}
+@media (max-width:760px) {
+  .content-grid {grid-template-columns:minmax(0,1fr)}
+  .btn,.close,.palette button {min-height:44px}
+  .close,.palette button {min-width:44px}
+  .table-foot button {min-height:44px;padding:6px}
+  .search-wrap input,.field input {font-size:16px}
+  .search-wrap svg {top:50%;transform:translateY(-50%);pointer-events:none}
+  .export-links {padding-inline:18px}
+}
+@media (max-width:420px) {
+  .shell {padding-inline:14px}
+  .intro {gap:12px}
+  .stats {grid-template-columns:repeat(3,minmax(0,1fr))}
+  .stat {padding:12px 8px}
+  .stat small {display:block;padding-left:0}
+  .table-head {align-items:flex-start;flex-direction:column}
+  .table-head .btn {font-size:12px}
+  .table-scroll table {table-layout:fixed}
+  th,td {padding-inline:10px}
+  th:last-child {width:39%}
+  td.word {min-width:0;font-size:17px}
+  .question-label span:last-child {display:none}
+  .options {grid-template-columns:minmax(0,1fr)}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳至主要內容</a>
+<div class="shell">
+<header><div class="brand"><span class="mark" aria-hidden="true">こ</span><span class="brand-name" lang="ja">ことば</span><span class="brand-divider"></span><span class="brand-sub">日語練習室</span></div><span class="header-note"><span class="dot"></span>A LITTLE JAPANESE, EVERY DAY</span></header>
+<section class="intro"><div><div class="eyebrow">YOUR EVERYDAY VOCABULARY NOTEBOOK</div><h1>每天一點，把日語記起來。</h1><p>收藏新的單字，練習熟悉的讀音。讓每一次複習，都有一點收穫。</p></div><div class="seal" lang="ja" aria-hidden="true">日々</div></section>
+<section class="stats" aria-label="學習概況">
+<div class="stat"><div><p class="stat-label">我的單字庫</p><strong id="total-count">—</strong><small>個單字</small></div><span class="stat-icon" aria-hidden="true">本</span></div>
+<div class="stat"><div><p class="stat-label">新增單字</p><strong id="new-count">—</strong><small>個待熟悉</small></div><span class="stat-icon" aria-hidden="true">＋</span></div>
+<div class="stat"><div><p class="stat-label">最近一次測驗</p><strong id="last-score">—</strong><small id="last-score-unit">尚未測驗</small></div><span class="stat-icon" aria-hidden="true">✓</span></div>
+</section>
+<main id="main">
+<nav class="tabs" role="tablist" aria-label="學習功能"><button id="tab-vocab" class="tab" role="tab" aria-selected="true" aria-controls="vocab-panel">單字表 <span class="tag" id="tab-count">0</span></button><button id="tab-exam" class="tab" role="tab" aria-selected="false" aria-controls="exam-panel" tabindex="-1">讀音考試 <span aria-hidden="true">↗</span></button></nav>
+<div id="notice" class="notice" role="status" aria-live="polite"></div>
+<div id="storage-notice" class="notice error" role="status" aria-live="polite"></div>
+<section id="vocab-panel" role="tabpanel" aria-labelledby="tab-vocab">
+<div class="content-grid"><div class="panel">
+<div class="table-head"><div><h2 class="panel-title">我的單字表</h2><p class="sub">讀一遍，再把它記在心裡。</p></div><div class="actions"><button class="btn" id="download-png" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 16v4h16v-4"/></svg>下載 PNG</button><button class="btn primary" id="open-add" disabled>＋ 新增</button></div></div>
+<div class="export-links" id="png-links" hidden><a class="btn" id="save-png" download="日語單字表.png">儲存 PNG</a><a class="btn" id="preview-png" target="_blank" rel="noopener">開啟圖片</a></div>
+<div class="filters"><div class="search-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><input id="search" type="search" aria-label="搜尋漢字、假名或中文" placeholder="搜尋漢字、假名或中文…"></div><span class="legend">新增單字</span></div>
+<div class="table-scroll"><table><thead><tr><th scope="col">漢字</th><th scope="col">假名</th><th scope="col">中文意思</th></tr></thead><tbody id="vocab-body"></tbody></table><div class="empty" id="table-empty">正在載入單字…</div></div>
+<div class="table-foot"><span id="visible-count">讀取 vocab.json</span><div class="actions"><button id="import-json">匯入 JSON</button><button id="export-json">匯出 JSON</button><button id="reset-vocab" hidden>使用網站字庫</button><button id="clear-new" hidden>清除新增標記</button></div></div>
+</div><aside><div class="practice-card"><span class="kana-art" lang="ja" aria-hidden="true">あ</span><p class="eyebrow">PUT YOUR MEMORY TO THE TEST</p><h2>這些字的讀音，<br>你還記得嗎？</h2><p>選擇或填空，找到適合你的練習方式。<br>每個單字一次，答錯的再練習。</p><button class="btn light wide" id="go-practice">開始讀音練習 <span aria-hidden="true">↗</span></button></div><div class="small-card"><h3>讓單字慢慢變熟悉</h3><div class="step"><span class="step-num">1</span><p><b>先讀一遍</b><br>對照漢字、假名與中文意思。</p></div><div class="step"><span class="step-num">2</span><p><b>試著回想</b><br>在測驗中練習想起正確讀音。</p></div><div class="step"><span class="step-num">3</span><p><b>再練習錯題</b><br>把時間留給還不熟悉的單字。</p></div><p class="tiny-note">新增單字會保留在目前瀏覽器。<br>匯出 JSON，即可備份或帶到其他裝置。</p></div></aside></div>
+</section>
+<section id="exam-panel" role="tabpanel" aria-labelledby="tab-exam" hidden><div id="exam-content"></div></section>
+</main>
+<div class="study-quote"><span lang="ja">「継続は力なり。」持續，就是力量。</span><span class="footer-label">ことば · MAKE A LITTLE PROGRESS</span></div>
+<details class="dev"><summary>使用說明與程式測試</summary><p>單字資料為同資料夾的 vocab.json（JSON 陣列）。從網站開啟會自動載入；直接開啟 HTML 時，可用「匯入 JSON」選取檔案。匯入會替換基礎字庫，並保留此瀏覽器新增的單字。字庫、新增標記及最近一次已交卷的結果會保存在這個瀏覽器。匯出 JSON 只包含單字，可用來備份或搬移字庫。搜尋只篩選表格；考試使用完整字庫。PNG 會依目前的篩選結果產生，完成後可儲存或開啟圖片。</p><p>填空會忽略前後空白，並將片假名轉為平假名比對；長音、促音與大小假名仍須正確。四選一優先取用字庫中不同的讀音，不足時使用備用假名。每題等分，未作答算錯，總分四捨五入。新加入 JSON 的單字會從第二次載入起自動標記，也可手動清除標記。</p><p>程式分為 DATA（載入、驗證與去重）、EXAM LOGIC（洗牌、選項、計分）、UI（畫面、儲存與下載）三區。所有功能不依賴外部套件。內建測試可隨時執行，也可在網址加上 ?test=1 自動執行。</p><button class="btn" id="run-tests">執行內建測試</button><pre id="test-results" class="test-results" aria-live="polite"></pre></details>
+</div>
+<input id="json-file" type="file" accept=".json,application/json" hidden>
+<dialog id="add-dialog" aria-labelledby="add-title"><form id="add-form"><div class="dialog-head"><h2 id="add-title">收下一個新單字</h2><button class="close" type="button" id="close-add" aria-label="關閉">×</button></div><p class="sub">新增後會以淺黃色標記，並加入下次考試。</p><label class="field">漢字<input name="kanji" placeholder="例如：地面" required maxlength="100"></label><label class="field">假名<input name="kana" lang="ja" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="例如：じめん" required maxlength="100"></label><label class="field">中文意思<input name="meaning" placeholder="例如：地面" required maxlength="300"></label><p id="add-error" class="form-error" role="alert"></p><button class="btn primary wide" type="submit">新增到單字庫</button></form></dialog>
+
+<script id="core">
+'use strict';
+// ═══════════════ 1. DATA：純資料函式，不依賴 DOM ═══════════════
+const Data = (() => {
+  const clean = value => typeof value === 'string' ? value.normalize('NFC').trim() : '';
+  const key = word => JSON.stringify([clean(word.kanji), clean(word.kana)]);
+  function dedupe(rows) {
+    if (!Array.isArray(rows)) throw new Error('vocab.json 最外層必須是陣列 [ {...}, {...} ]。');
+    const words = [], duplicates = [], invalid = [], seen = new Set();
+    rows.forEach((row, index) => {
+      if (!row || typeof row !== 'object' || Array.isArray(row)) { invalid.push(index + 1); return; }
+      const word = {kanji:clean(row.kanji), kana:clean(row.kana), meaning:clean(row.meaning)};
+      if (!word.kanji || !word.kana || !word.meaning || !/^[\p{Script=Hiragana}\p{Script=Katakana}ー・\s]+$/u.test(word.kana)) { invalid.push(index + 1); return; }
+      const id = key(word);
+      if (seen.has(id)) { duplicates.push(word); return; }
+      seen.add(id); words.push(word);
+    });
+    return {words, duplicates, invalid};
+  }
+  async function load(url = './vocab.json') {
+    const response = await fetch(url, {cache:'no-store'});
+    if (!response.ok) throw new Error(`載入失敗（HTTP ${response.status}）`);
+    return response.json();
+  }
+  return {clean, key, dedupe, load};
+})();
+
+// ═══════════════ 2. EXAM LOGIC：純考試函式，可單獨測試 ═══════════════
+const Exam = (() => {
+  // Fisher–Yates：建立新陣列，不修改原始字庫；rng 可注入以便重現測試。
+  function shuffle(items, rng = Math.random) {
+    const result = [...items];
+    for (let i = result.length - 1; i > 0; i--) {
+      const j = Math.floor(rng() * (i + 1));
+      [result[i], result[j]] = [result[j], result[i]];
+    }
+    return result;
+  }
+  const normalizeAnswer = value => String(value ?? '').normalize('NFKC').trim().replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0)-0x60)).normalize('NFC');
+  function options(word, pool, rng = Math.random) {
+    const correct = normalizeAnswer(word.kana);
+    const readings = new Map();
+    for (const item of shuffle(pool, rng)) {
+      const normalized = normalizeAnswer(item.kana);
+      if (normalized && normalized !== correct && !readings.has(normalized)) readings.set(normalized, item.kana);
+    }
+    for (const kana of ['あさ','ひる','よる','そら','はな','みず']) {
+      if (kana !== correct && !readings.has(kana)) readings.set(kana, kana);
+    }
+    const wrong = [...readings.values()].slice(0, 3);
+    return shuffle([word.kana, ...wrong], rng);
+  }
+  function create(source, pool = source, rng = Math.random) {
+    const unique = [...new Map(source.map(w => [Data.key(w), w])).values()];
+    return {questions:shuffle(unique, rng).map(word => ({word, options:options(word, pool, rng)})), answers:Array(unique.length).fill('')};
+  }
+  function grade(words, answers) {
+    const details = words.map((word, index) => {
+      const answer = String(answers[index] ?? '');
+      return {word, answer, expected:word.kana, correct:normalizeAnswer(answer) === normalizeAnswer(word.kana)};
+    });
+    const correct = details.filter(row => row.correct).length;
+    return {total:words.length, correct, score:words.length ? Math.round(correct / words.length * 100) : 0, details, wrong:details.filter(row=>!row.correct).map(row=>row.word)};
+  }
+  return {shuffle, options, create, grade, normalizeAnswer};
+})();
+globalThis.VocabApp = {Data, Exam};
+</script>
+<!-- TESTS are embedded below; Node and browser execute the same test suite. -->
+<script id="tests">
+globalThis.runVocabTests = function ({ Data, Exam }) {
+  const results = [];
+  const assert = (condition, message) => { if (!condition) throw new Error(message); };
+  const test = (name, fn) => { try { fn(); results.push({name, pass:true}); } catch(error) { results.push({name, pass:false, error:error.message}); } };
+  const words = [
+    {kanji:'地面',kana:'じめん',meaning:'地面'},
+    {kanji:'空',kana:'そら',meaning:'天空'},
+    {kanji:'雨',kana:'あめ',meaning:'雨'},
+    {kanji:'飴',kana:'あめ',meaning:'糖果'},
+    {kanji:'海',kana:'うみ',meaning:'海'}
+  ];
+  test('去重：漢字＋假名相同才略過，保留第一筆', () => {
+    const r = Data.dedupe([...words, {...words[0], meaning:'另一個意思'}, {...words[0], kana:'ちめん'}]);
+    assert(r.words.length === 6 && r.duplicates.length === 1, '去重數量錯誤');
+    assert(r.words[0].meaning === '地面', '應保留第一筆');
+    assert(r.words.filter(w=>w.kana === 'あめ').length === 2, '不同漢字的同音字應保留');
+  });
+  test('資料：忽略前後空白，拒絕空值與錯誤 JSON 結構', () => {
+    assert(Data.dedupe([{kanji:' 地面 ',kana:' じめん ',meaning:' 地面 '}]).words[0].kanji === '地面', '應移除空白');
+    assert(Data.dedupe([{}, {kanji:'空',kana:'',meaning:'天空'}]).invalid.length === 2, '無效項目應略過');
+    let rejected = false; try { Data.dedupe({}); } catch { rejected = true; }
+    assert(rejected, '非陣列應拒絕');
+  });
+  test('洗牌：100 回合每個單字只出現一次，不修改來源', () => {
+    const before = JSON.stringify(words);
+    for(let i=0;i<100;i++) {
+      const shuffled = Exam.shuffle(words);
+      assert(shuffled !== words && shuffled.length === words.length, '應產生新陣列');
+      assert(new Set(shuffled.map(Data.key)).size === words.length, '不應重複');
+      assert(words.every(w=>shuffled.includes(w)), '不得遺漏單字');
+    }
+    assert(before === JSON.stringify(words), '不應改動來源');
+    assert(Exam.shuffle([]).length === 0, '空陣列應可洗牌');
+    assert(JSON.stringify(Exam.shuffle(words, ()=>0)) !== before, '洗牌應變更順序');
+  });
+  test('選項：四個不同假名，正解恰好一次；少量字庫也適用', () => {
+    for(const pool of [words, [words[0]], []]) for(let i=0;i<50;i++) {
+      const options = Exam.options(words[0], pool);
+      assert(options.length === 4 && new Set(options).size === 4, '應有四個不重複選項');
+      assert(options.filter(x=>x === words[0].kana).length === 1, '正解應只出現一次');
+    }
+  });
+  test('計分：正確、錯誤與未作答，逐題答案與錯題一致', () => {
+    const r = Exam.grade(words.slice(0,3), ['じめん', 'うみ', '']);
+    assert(r.score === 33 && r.correct === 1 && r.total === 3, '分數錯誤');
+    assert(r.wrong.length === 2 && r.wrong[0].kanji === '空', '錯題錯誤');
+    assert(r.details[1].answer === 'うみ' && r.details[1].expected === 'そら', '逐題答案錯誤');
+    assert(Exam.grade([], []).score === 0, '零題分數應為零');
+    assert(Exam.grade(words, words.map(w=>w.kana)).score === 100, '全對應為百分');
+  });
+  test('填空：接受前後空白、片假名與組合濁音，保留長音差異', () => {
+    assert(Exam.grade([words[0]], [' ジメン ']).correct === 1, '應接受片假名');
+    assert(Exam.grade([words[0]], ['し\u3099めん']).correct === 1, '應正規化濁音');
+    assert(Exam.grade([{kana:'おばあさん'}], ['おばさん']).correct === 0, '不可忽略長音差異');
+  });
+  test('重考：僅抽取錯題、每題一次，選項可使用完整字庫', () => {
+    const wrong = Exam.grade(words, words.map((w,i)=>i%2 ? '' : w.kana)).wrong;
+    const retry = Exam.create(wrong, words);
+    assert(retry.questions.length === 2 && new Set(retry.questions.map(q=>Data.key(q.word))).size === 2, '重考題目錯誤');
+    assert(retry.questions.every(q=>wrong.some(w=>Data.key(w) === Data.key(q.word)) && q.options.length === 4), '只能重考錯題');
+  });
+  return results;
+};
+
+</script>
+<script id="ui">
+'use strict';
+// ═══════════════ 3. UI：DOM、瀏覽器儲存、檔案匯入／匯出 ═══════════════
+(() => {
+  const $ = id => document.getElementById(id);
+  const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const STORE = 'kotoba-notebook-v1';
+  const storageWarning = '目前瀏覽器無法儲存進度。關閉頁面前，可匯出 JSON 備份單字。';
+  let saved = {};
+  try {
+    const stored = localStorage.getItem(STORE);
+    if (stored) saved = JSON.parse(stored) || {};
+  } catch {
+    $('storage-notice').textContent = '無法讀取先前儲存的進度。';
+  }
+  const readWords = rows => Array.isArray(rows) ? Data.dedupe(rows).words : [];
+  const imported = readWords(saved.imported);
+  const lastAttempt = restoreAttempt(saved.lastAttempt);
+  const state = {
+    base:imported,
+    imported:imported.length ? imported : null,
+    custom:readWords(saved.custom),
+    words:[],
+    newKeys:new Set(Array.isArray(saved.newKeys) ? saved.newKeys : []),
+    known:Array.isArray(saved.known) ? new Set(saved.known) : null,
+    exam:null,
+    result:null,
+    mode:lastAttempt?.mode ?? 'choice',
+    current:0,
+    lastResult:lastAttempt?.result ?? null,
+    lastMode:lastAttempt?.mode ?? 'choice',
+    lastScore:lastAttempt?.result.score ?? (typeof saved.lastScore === 'number' ? saved.lastScore : null),
+    filter:''
+  };
+  const notify = (message, error=false) => { $('notice').textContent = message; $('notice').classList.toggle('error', error); };
+
+  function restoreAttempt(attempt) {
+    if (!Array.isArray(attempt?.answers)) return null;
+    const words = readWords(attempt.words);
+    if (!words.length || words.length !== attempt.words.length || words.length !== attempt.answers.length) return null;
+    return {
+      mode:attempt.mode === 'fill' ? 'fill' : 'choice',
+      result:Exam.grade(words, attempt.answers)
+    };
+  }
+
+  function persist() {
+    const lastAttempt = state.lastResult ? {
+      mode:state.lastMode,
+      words:state.lastResult.details.map(row => row.word),
+      answers:state.lastResult.details.map(row => row.answer)
+    } : null;
+    try {
+      localStorage.setItem(STORE, JSON.stringify({
+        custom:state.custom,
+        imported:state.imported,
+        newKeys:[...state.newKeys],
+        known:state.known ? [...state.known] : null,
+        lastScore:state.lastScore,
+        lastAttempt
+      }));
+      $('storage-notice').textContent = '';
+    } catch {
+      $('storage-notice').textContent = storageWarning;
+    }
+  }
+  const filtered = () => state.words.filter(w=>[w.kanji,w.kana,w.meaning].some(v=>v.toLocaleLowerCase().includes(state.filter.toLocaleLowerCase())));
+  function refresh() {
+    const combined = Data.dedupe([...state.base, ...state.custom]);
+    state.words = combined.words;
+    $('total-count').textContent = state.words.length;
+    $('new-count').textContent = state.words.filter(w=>state.newKeys.has(Data.key(w))).length;
+    $('tab-count').textContent = state.words.length;
+    $('last-score').textContent = state.lastScore ?? '—';
+    $('last-score-unit').textContent = state.lastScore === null ? '尚未測驗' : '分 / 100';
+    $('clear-new').hidden = !state.words.some(w=>state.newKeys.has(Data.key(w)));
+    renderTable();
+    if (!state.exam && !state.result) renderConfig();
+    return combined;
+  }
+  function applyRows(rows, label, isImport = false) {
+    // Validate first. Invalid JSON shape never destroys the current vocabulary.
+    const checked = Data.dedupe(rows);
+    if (!checked.words.length) throw new Error('沒有有效單字。每筆須有非空白的 kanji、kana、meaning；kana 請使用假名。');
+    const previousKnown = state.known;
+    if (previousKnown) for (const word of checked.words) if (!previousKnown.has(Data.key(word))) state.newKeys.add(Data.key(word));
+    state.base = checked.words;
+    state.imported = isImport ? checked.words : null;
+    $('reset-vocab').hidden = !state.imported;
+    state.known = new Set(checked.words.map(Data.key));
+    const combined = refresh();
+    const dupes = [...checked.duplicates, ...combined.duplicates];
+    const duplicateText = dupes.length ? ` 已略過 ${dupes.length} 筆重複（漢字＋假名）：${dupes.slice(0,5).map(w=>w.kanji+'／'+w.kana).join('、')}${dupes.length>5?'…':''}。` : ' 無重複單字。';
+    notify(`${label}：已載入 ${state.words.length} 個單字。${duplicateText}${checked.invalid.length?` 已略過 ${checked.invalid.length} 筆格式不完整或非假名資料（第 ${checked.invalid.slice(0,10).join('、')} 筆）。`:''}`);
+    persist();
+  }
+  function renderTable() {
+    const rows = filtered();
+    $('vocab-body').innerHTML = rows.map(word => `<tr class="${state.newKeys.has(Data.key(word))?'is-new':''}"><td class="word"><span lang="ja">${escape(word.kanji)}</span>${state.newKeys.has(Data.key(word))?'<span class="new-label">新增</span>':''}</td><td class="kana" lang="ja">${escape(word.kana)}</td><td class="meaning">${escape(word.meaning)}</td></tr>`).join('');
+    $('table-empty').hidden = rows.length > 0;
+    $('table-empty').textContent = state.words.length ? '找不到符合的單字，試試其他關鍵字。' : '還沒有單字。匯入 vocab.json，或新增第一個單字。';
+    $('visible-count').textContent = `顯示 ${rows.length} / ${state.words.length} 個單字`;
+    $('download-png').disabled = rows.length === 0;
+    $('export-json').disabled = state.words.length === 0;
+  }
+  function switchTab(name) {
+    for (const tab of ['vocab','exam']) {
+      const active = tab === name;
+      $('tab-'+tab).setAttribute('aria-selected', String(active));
+      $('tab-'+tab).tabIndex = active ? 0 : -1;
+      $(tab+'-panel').hidden = !active;
+    }
+  }
+  function renderConfig() {
+    $('exam-content').innerHTML = `<div class="panel exam-config"><p class="section-kicker">A MOMENT TO RECALL</p><h2>把讀音，從記憶裡找出來。</h2><p class="lead">本次練習包含全部 <b>${state.words.length}</b> 個單字。題目會隨機排列，每個單字只出現一次，交卷後再一起核對答案。</p><fieldset style="border:0;padding:0;margin:0"><legend style="font-size:12px;margin-bottom:12px">選擇練習方式</legend><div class="mode-grid"><label class="mode-card"><input type="radio" name="exam-mode" value="choice" ${state.mode==='choice'?'checked':''}><span><strong>四選一</strong><small>看漢字與中文，<br>選出正確的假名。</small></span></label><label class="mode-card"><input type="radio" name="exam-mode" value="fill" ${state.mode==='fill'?'checked':''}><span><strong>假名填空</strong><small>看漢字與中文，<br>親手寫下讀音。</small></span></label></div></fieldset><button class="btn primary wide" id="start-exam" ${state.words.length?'':'disabled'}>開始練習 · ${state.words.length} 題 →</button><p class="sub" style="text-align:center;margin-top:15px">不計時，照自己的步調練習。未作答的題目會算作答錯。</p>${state.lastResult ? `<div class="result-actions"><button class="btn" id="view-last-result">查看上次結果（${state.lastResult.wrong.length} 題錯題）</button></div>` : ''}</div>`;
+    $('start-exam').onclick = () => {
+      state.mode = document.querySelector('input[name="exam-mode"]:checked').value;
+      startExam(state.words);
+    };
+    const viewLast = $('view-last-result');
+    if (viewLast) viewLast.onclick = () => {
+      state.result = state.lastResult;
+      state.mode = state.lastMode;
+      renderResult();
+      focusQuestion();
+    };
+  }
+  function startExam(source) {
+    if (!source.length) return;
+    state.exam = Exam.create(source, state.words);
+    state.result = null; state.current = 0;
+    switchTab('exam'); renderQuestion();
+    focusQuestion();
+  }
+  function focusQuestion() {
+    requestAnimationFrame(() => document.querySelector('#exam-content h2')?.focus());
+  }
+  function renderQuestion() {
+    const exam = state.exam, i = state.current, {word, options} = exam.questions[i];
+    const answered = exam.answers.filter(a=>a.trim()).length;
+    $('exam-content').innerHTML = `<div class="exam-wrap"><div class="exam-top"><span>${state.mode==='choice'?'四選一':'假名填空'} · 第 ${i+1} / ${exam.questions.length} 題</span><span id="answer-counter">已作答 ${answered} 題</span></div><div class="progress" role="progressbar" aria-label="作答進度" aria-valuemin="0" aria-valuemax="${exam.questions.length}" aria-valuenow="${answered}"><div id="progress-fill" style="width:${answered/exam.questions.length*100}%"></div></div><div class="panel question-card"><p class="question-label"><span>請回答這個單字的讀音</span><span>READ & RECALL</span></p><h2 class="question-word" tabindex="-1" lang="ja">${escape(word.kanji)}</h2><p class="question-meaning">${escape(word.meaning)}</p>${state.mode==='choice'?`<div class="options" role="group" aria-label="選擇正確假名">${options.map((option,n)=>`<button class="option" data-option="${n}" aria-pressed="${exam.answers[i]===option}"><span class="option-num" aria-hidden="true">${n+1}</span><span lang="ja">${escape(option)}</span></button>`).join('')}</div>`:`<label class="fill-label" for="kana-answer">我的答案（假名）</label><input id="kana-answer" class="fill-input" lang="ja" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="輸入假名…" value="${escape(exam.answers[i])}"><p class="sub">可輸入平假名或片假名。交卷後顯示正確答案。</p>`}<div class="question-nav"><button class="btn" id="prev-question" ${i===0?'disabled':''}>← 上一題</button><small>答案已暫存在本次練習，可隨時返回修改</small><button class="btn primary" id="next-question" ${i===exam.questions.length-1?'disabled':''}>下一題 →</button></div></div><div class="palette" aria-label="跳到題目">${exam.questions.map((q,n)=>`<button data-question="${n}" class="${n===i?'current ':''}${exam.answers[n].trim()?'answered':''}" aria-label="第 ${n+1} 題，${exam.answers[n].trim()?'已作答':'未作答'}" ${n===i?'aria-current="step"':''}>${n+1}</button>`).join('')}</div><div class="submit-row"><span id="submit-note" class="sub">${exam.questions.length-answered?`還有 ${exam.questions.length-answered} 題未作答，交卷後會算錯。`:'全部完成，可以交卷了。'}</span><button class="btn primary" id="submit-exam">交卷並查看結果 →</button></div></div>`;
+    document.querySelectorAll('[data-option]').forEach(button=>button.onclick = () => {
+      exam.answers[i] = options[Number(button.dataset.option)];
+      document.querySelectorAll('[data-option]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+      updateProgress();
+    });
+    if ($('kana-answer')) $('kana-answer').oninput = event => { exam.answers[i] = event.target.value; updateProgress(); };
+    $('prev-question').onclick = ()=>navigate(i-1);
+    $('next-question').onclick = ()=>navigate(i+1);
+    document.querySelectorAll('[data-question]').forEach(button=>button.onclick=()=>navigate(Number(button.dataset.question)));
+    $('submit-exam').onclick = submitExam;
+  }
+  function updateProgress() {
+    const exam = state.exam, answered = exam.answers.filter(a=>a.trim()).length, n = state.current;
+    $('answer-counter').textContent = `已作答 ${answered} 題`;
+    $('progress-fill').style.width = answered/exam.questions.length*100+'%';
+    document.querySelector('.progress').setAttribute('aria-valuenow',answered);
+    const button = document.querySelector(`[data-question="${n}"]`);
+    button.classList.toggle('answered',!!exam.answers[n].trim());
+    button.setAttribute('aria-label',`第 ${n+1} 題，${exam.answers[n].trim()?'已作答':'未作答'}`);
+    $('submit-note').textContent = answered===exam.questions.length?'全部完成，可以交卷了。':`還有 ${exam.questions.length-answered} 題未作答，交卷後會算錯。`;
+  }
+  function navigate(n) { if(n<0||n>=state.exam.questions.length)return; state.current=n;renderQuestion();focusQuestion(); }
+  function submitExam() {
+    state.result = Exam.grade(state.exam.questions.map(q=>q.word),state.exam.answers);
+    state.exam = null;
+    state.lastResult = state.result;
+    state.lastMode = state.mode;
+    state.lastScore = state.result.score;
+    persist(); refresh(); renderResult(); focusQuestion();
+  }
+  function renderResult() {
+    const result = state.result;
+    $('exam-content').innerHTML = `<div class="exam-wrap"><div class="panel result-hero"><p class="section-kicker">ONE STEP CLOSER</p><h2 tabindex="-1" style="font-size:22px;font-weight:550">${result.wrong.length?'知道哪裡不熟，就是進步的開始。':'每一個讀音，都記住了。'}</h2><div class="score">${result.score}<small> / 100</small></div><p class="lead" style="margin:4px 0 0">共 ${result.total} 題 · 答對 ${result.correct} 題 · 答錯 ${result.wrong.length} 題</p><div class="result-actions"><button class="btn primary" id="retry-wrong" ${result.wrong.length?'':'disabled'}>只重考答錯的題目（${result.wrong.length}）</button><button class="btn" id="restart-all">再練習全部單字</button></div></div>${result.wrong.length?`<div class="wrong-list"><h3>這些單字，再看一眼</h3>${result.wrong.map(w=>`<span class="wrong-chip"><span lang="ja">${escape(w.kanji)}</span><small lang="ja">${escape(w.kana)}</small></span>`).join('')}</div>`:'<p class="notice" style="margin-top:20px">本次沒有錯題！可以換成填空題再挑戰看看。</p>'}<h3 class="review-heading">逐題回顧 <span class="sub">正確答案與你的答案</span></h3>${result.details.map((row,n)=>`<div class="review-row ${row.correct?'':'incorrect'}"><span class="${row.correct?'good':'bad'}" aria-label="${row.correct?'正確':'錯誤'}">${row.correct?'✓':'✕'}</span><div class="review-word"><small>第 ${n+1} 題 · ${escape(row.word.meaning)}</small><strong lang="ja">${escape(row.word.kanji)}</strong></div><div class="review-answer"><small>我的答案</small><span lang="ja" class="${row.correct?'good':'bad'}">${row.answer.trim()?escape(row.answer):'未作答'}</span></div><div><small>正確答案</small><span lang="ja" class="good">${escape(row.expected)}</span></div></div>`).join('')}</div>`;
+    $('retry-wrong').onclick = ()=>startExam(result.wrong);
+    $('restart-all').onclick = ()=>{state.result=null;renderConfig();};
+  }
+  function download(blob, filename) {
+    const url = URL.createObjectURL(blob), anchor = document.createElement('a');
+    anchor.href=url;anchor.download=filename;document.body.append(anchor);anchor.click();anchor.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),30000);
+  }
+  let pngUrl;
+  async function exportPNG() {
+    const button = $('download-png');
+    const words = filtered();
+    const newKeys = new Set(state.newKeys);
+    button.disabled = true;
+    try {
+      if (document.fonts?.ready) await document.fonts.ready;
+      const canvas = document.createElement('canvas'), ctx = canvas.getContext('2d');
+      if(!ctx) throw new Error('此瀏覽器無法建立圖片。');
+      const W=1500, x=[70,500,960], widths=[390,420,460];
+      const font = '25px "Microsoft JhengHei", "Noto Sans TC", sans-serif';
+      function wrap(text, width) {
+        const lines=[];let line='';
+        for(const char of String(text)) { if(char==='\n'){lines.push(line);line='';continue;}if(line&&ctx.measureText(line+char).width>width){lines.push(line);line=char;}else line+=char; }
+        lines.push(line);return lines;
+      }
+      ctx.font=font;
+      const rows = words.map(w=>({word:w,lines:[wrap(w.kanji,widths[0]-65),wrap(w.kana,widths[1]),wrap(w.meaning,widths[2])]}));
+      rows.forEach(row=>row.height=Math.max(80,Math.max(...row.lines.map(a=>a.length))*38+30));
+      const H=235+rows.reduce((sum,row)=>sum+row.height,0);
+      if(H>4096) throw new Error('單字表太長，請使用搜尋分批下載 PNG。');
+      canvas.width=W;canvas.height=H;
+      ctx.fillStyle='#fffefa';ctx.fillRect(0,0,W,H);ctx.textBaseline='top';
+      ctx.fillStyle='#345b46';ctx.font='bold 38px "Microsoft JhengHei", sans-serif';ctx.fillText('ことば · 我的日語單字表',70,42);
+      ctx.fillStyle='#738078';ctx.font='22px "Microsoft JhengHei", sans-serif';ctx.fillText(`${words.length} 個單字 · 淺黃色為新增單字`,70,103);
+      ctx.fillStyle='#eef1e7';ctx.fillRect(40,157,W-80,58);ctx.font=font;ctx.fillStyle='#65755a';
+      ['漢字','假名','中文意思'].forEach((t,i)=>ctx.fillText(t,x[i],173));
+      let y=215;
+      for(const row of rows) {
+        const isNew=newKeys.has(Data.key(row.word));
+        if(isNew){ctx.fillStyle='#f9f0d6';ctx.fillRect(40,y,W-80,row.height);}
+        ctx.font=font;
+        row.lines.forEach((lines,col)=>{ctx.fillStyle=col===2?'#6d7768':'#294533';lines.forEach((line,n)=>ctx.fillText(line,x[col],y+20+n*38));});
+        if(isNew){ctx.fillStyle='#9b7c3e';ctx.font='18px "Microsoft JhengHei", sans-serif';ctx.fillText('新增',x[0]+widths[0]-55,y+24);}
+        y+=row.height;ctx.strokeStyle='#e0e4da';ctx.beginPath();ctx.moveTo(40,y);ctx.lineTo(W-40,y);ctx.stroke();
+      }
+      const blob = await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));
+      canvas.width = canvas.height = 1;
+      if (!blob) throw new Error('圖片產生失敗，請縮小篩選範圍後再試。');
+      if (pngUrl) URL.revokeObjectURL(pngUrl);
+      pngUrl = URL.createObjectURL(blob);
+      $('save-png').href = $('preview-png').href = pngUrl;
+      $('png-links').hidden = false;
+      $('save-png').focus();
+      notify(`已產生 PNG：${words.length} 個單字。請選擇儲存或開啟圖片。`);
+    } catch(error) { notify(error.message,true); }
+    finally { button.disabled=filtered().length===0; }
+  }
+  $('tab-vocab').onclick=()=>switchTab('vocab');$('tab-exam').onclick=()=>switchTab('exam');
+  document.querySelector('[role="tablist"]').addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();const name=event.key==='Home'?'vocab':event.key==='End'?'exam':$('tab-vocab').getAttribute('aria-selected')==='true'?'exam':'vocab';switchTab(name);$('tab-'+name).focus();}});
+  $('go-practice').onclick=()=>{switchTab('exam');$('tab-exam').focus();};
+  $('search').oninput=event=>{state.filter=event.target.value.trim();renderTable();};
+  $('open-add').onclick=()=>{$('add-form').reset();$('add-error').textContent='';$('add-dialog').showModal();};
+  $('close-add').onclick=()=>$('add-dialog').close();
+  $('add-form').onsubmit=event=>{
+    event.preventDefault();const fields=new FormData(event.target);
+    const word={kanji:Data.clean(fields.get('kanji')),kana:Data.clean(fields.get('kana')),meaning:Data.clean(fields.get('meaning'))};
+    if(!Data.dedupe([word]).words.length){$('add-error').textContent='請填寫三個欄位，讀音須使用平假名或片假名。';return;}
+    if(state.words.some(w=>Data.key(w)===Data.key(word))){$('add-error').textContent='已略過重複：相同的漢字＋假名已在單字庫中。';return;}
+    state.custom.push(word);state.newKeys.add(Data.key(word));refresh();notify(`已新增「${word.kanji}」，並以淺黃色標記。`);persist();$('add-dialog').close();
+  };
+  $('clear-new').onclick=()=>{state.newKeys.clear();$('new-count').textContent='0';$('clear-new').hidden=true;renderTable();persist();notify('已清除新增標記，單字仍保留在字庫中。');};
+  $('download-png').onclick=exportPNG;
+  $('export-json').onclick=()=>download(new Blob([JSON.stringify(state.words,null,2)+'\n'],{type:'application/json;charset=utf-8'}),'vocab.json');
+  $('import-json').onclick=()=>$('json-file').click();
+  $('reset-vocab').onclick = async () => {
+    const previous = state.imported;
+    const button = $('reset-vocab');
+    button.disabled = true;
+    try {
+      const rows = await Data.load();
+      if (state.imported === previous) applyRows(rows, 'vocab.json');
+    } catch (error) {
+      if (state.imported === previous) notify('無法載入網站字庫：' + error.message, true);
+    } finally {
+      button.disabled = false;
+    }
+  };
+  $('json-file').onchange=async event=>{
+    const file=event.target.files[0];if(!file)return;
+    try { const data=JSON.parse((await file.text()).replace(/^\uFEFF/,''));applyRows(data,'匯入 '+file.name,true);$('open-add').disabled=false; }
+    catch(error){notify('匯入失敗：'+error.message,true);}
+    finally {event.target.value='';}
+  };
+  function runTests() {
+    const results=globalThis.runVocabTests(globalThis.VocabApp);
+    $('test-results').textContent=results.map(r=>`${r.pass?'✓':'✕'} ${r.name}${r.error?'：'+r.error:''}`).join('\n')+`\n\n${results.filter(r=>r.pass).length} / ${results.length} 項通過`;
+    document.querySelector('.dev').open=true;
+    return results;
+  }
+  $('run-tests').onclick=runTests;
+  refresh();
+  if (state.imported) {
+    notify('已載入此瀏覽器匯入的字庫。');
+    $('reset-vocab').hidden = false;
+    $('open-add').disabled = false;
+  } else {
+    Data.load().then(rows => {
+      if (!state.imported) applyRows(rows, 'vocab.json');
+    }).catch(error => {
+      if (state.imported) return;
+      notify(location.protocol === 'file:'
+        ? '請點「匯入 JSON」，選取同資料夾的 vocab.json。從網站開啟時會自動載入。'
+        : '無法自動載入 vocab.json：' + error.message + '。請確認檔案與 index.html 放在同一個資料夾，或使用「匯入 JSON」。', true);
+    }).finally(() => { $('open-add').disabled = false; });
+  }
+  if(new URLSearchParams(location.search).get('test')==='1')runTests();
+})();
+</script>
+</body>
+</html>
