@@ -227,11 +227,11 @@ globalThis.runVocabTests = function ({ Data, Exam }) {
     $('storage-notice').textContent = '無法讀取先前儲存的進度。';
   }
   const readWords = rows => Array.isArray(rows) ? Data.dedupe(rows).words : [];
-  const imported = readWords(saved.imported);
+  const imported = Array.isArray(saved.imported) ? readWords(saved.imported) : null;
   const lastAttempt = restoreAttempt(saved.lastAttempt);
   const state = {
-    base:imported,
-    imported:imported.length ? imported : null,
+    base:imported ?? [],
+    imported,
     custom:readWords(saved.custom),
     words:[],
     newKeys:new Set(Array.isArray(saved.newKeys) ? saved.newKeys : []),
@@ -294,7 +294,7 @@ globalThis.runVocabTests = function ({ Data, Exam }) {
   function applyRows(rows, label, isImport = false) {
     // Validate first. Invalid JSON shape never destroys the current vocabulary.
     const checked = Data.dedupe(rows);
-    if (!checked.words.length) throw new Error('沒有有效單字。每筆須有非空白的 kanji、kana、meaning；kana 請使用假名。');
+    if (rows.length && !checked.words.length) throw new Error('沒有有效單字。每筆須有非空白的 kanji、kana、meaning；kana 請使用假名。');
     const previousKnown = state.known;
     if (previousKnown) for (const word of checked.words) if (!previousKnown.has(Data.key(word))) state.newKeys.add(Data.key(word));
     state.base = checked.words;
@@ -304,14 +304,16 @@ globalThis.runVocabTests = function ({ Data, Exam }) {
     const combined = refresh();
     const dupes = [...checked.duplicates, ...combined.duplicates];
     const duplicateText = dupes.length ? ` 已略過 ${dupes.length} 筆重複（漢字＋假名）：${dupes.slice(0,5).map(w=>w.kanji+'／'+w.kana).join('、')}${dupes.length>5?'…':''}。` : ' 無重複單字。';
-    notify(`${label}：已載入 ${state.words.length} 個單字。${duplicateText}${checked.invalid.length?` 已略過 ${checked.invalid.length} 筆格式不完整或非假名資料（第 ${checked.invalid.slice(0,10).join('、')} 筆）。`:''}`);
+    notify(state.words.length
+      ? `${label}：已載入 ${state.words.length} 個單字。${duplicateText}${checked.invalid.length?` 已略過 ${checked.invalid.length} 筆格式不完整或非假名資料（第 ${checked.invalid.slice(0,10).join('、')} 筆）。`:''}`
+      : '字庫目前是空的。點「＋ 新增」加入第一個單字，或匯入自己的 JSON。');
     persist();
   }
   function renderTable() {
     const rows = filtered();
     $('vocab-body').innerHTML = rows.map(word => `<tr class="${state.newKeys.has(Data.key(word))?'is-new':''}"><td class="word"><span lang="ja">${escape(word.kanji)}</span>${state.newKeys.has(Data.key(word))?'<span class="new-label">新增</span>':''}</td><td class="kana" lang="ja">${escape(word.kana)}</td><td class="meaning">${escape(word.meaning)}</td></tr>`).join('');
     $('table-empty').hidden = rows.length > 0;
-    $('table-empty').textContent = state.words.length ? '找不到符合的單字，試試其他關鍵字。' : '還沒有單字。匯入 vocab.json，或新增第一個單字。';
+    $('table-empty').textContent = state.words.length ? '找不到符合的單字，試試其他關鍵字。' : '還沒有單字。點「＋ 新增」加入第一個單字。';
     $('visible-count').textContent = `顯示 ${rows.length} / ${state.words.length} 個單字`;
     $('download-png').disabled = rows.length === 0;
     $('export-json').disabled = state.words.length === 0;
